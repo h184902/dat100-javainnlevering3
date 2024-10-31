@@ -62,9 +62,8 @@ public abstract class Innlegg {
 	}
 	
 	public void doLike () {
-		int Like = likes++;
+		this.likes = likes++;
 		
-		return;
 	}
 	
 	public boolean erLik(Innlegg innlegg) {

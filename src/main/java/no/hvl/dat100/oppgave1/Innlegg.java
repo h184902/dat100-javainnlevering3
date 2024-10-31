@@ -62,20 +62,25 @@ public abstract class Innlegg {
 	}
 	
 	public void doLike () {
-		this.likes = likes++;
+		this.likes = likes + 1;
 		
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		throw new UnsupportedOperationException(TODO.method());
-
+		
+		boolean lik = false;
+		
+		if (this.id == innlegg.id) {
+			lik = true;
+		}
+		return lik;
 	}
 	
 	@Override
 	public String toString() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		String innlegg = String.valueOf(id) +"\n"+ bruker + "\n" + dato + "\n" + likes + "\n";
+		return innlegg;
 	}
 	
 	// Metoden nedenfor er kun for valgfri oppgave 6

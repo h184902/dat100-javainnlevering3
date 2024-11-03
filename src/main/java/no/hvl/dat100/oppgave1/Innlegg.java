@@ -4,10 +4,10 @@ import no.hvl.dat100.common.TODO;
 
 public abstract class Innlegg {
 	
-	int id;
-	String bruker;
-	String dato;
-	int likes;
+	private int id;
+	private String bruker;
+	private String dato;
+	private int likes;
 	
 	public Innlegg() {
 		

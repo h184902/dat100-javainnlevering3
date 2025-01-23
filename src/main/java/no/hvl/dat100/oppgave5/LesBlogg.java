@@ -8,21 +8,41 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-import no.hvl.dat100.common.TODO;
-import no.hvl.dat100.oppgave1.*;
-import no.hvl.dat100.oppgave2.*;
-import no.hvl.dat100.oppgave3.*;
-
 import javax.swing.JOptionPane;
 
 public class LesBlogg {
 
 	private static String TEKST = "TEKST";
 	private static String BILDE = "BILDE";
+	
 
+	
 	public static Blogg les(String mappe, String filnavn) {
-
-		throw new UnsupportedOperationException(TODO.method());
+		
+		filnavn = "bloggkorrekt.dat";
+		mappe = "src.no.hvl.dat100.tests";
+		
+		String filer = mappe + "." + filnavn;
+		
+		try(Scanner leser = new Scanner(filer)){
+			
+			
+			while(leser.hasNext()) {
+				if(leser.next() == TEKST) {
+					TEKST = leser.next();
+					System.out.println(TEKST);
+				}
+				if(leser.next() == BILDE) {
+					BILDE = leser.next();
+					System.out.println(BILDE);
+					
+				}
+				leser.close();
+				
+				
+			}
+			
+		}
 
 	}
 }
